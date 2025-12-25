@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: rolefit-backend
+    env: node
+    rootDir: backend
+    buildCommand: npm install
+    startCommand: node index.js
+    envVars:
+      - key: HUGGINGFACE_API_TOKEN
+        sync: false
+      - key: PORT
+        value: 10000
+      - key: NODE_ENV
+        value: production
+
