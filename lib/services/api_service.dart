@@ -10,8 +10,8 @@ class ApiService {
   ApiService({String? baseUrl})
       : baseUrl = baseUrl ??
             (kIsWeb
-                ? 'http://localhost:3000'
-                : 'http://10.0.2.2:3000');
+                ? 'https://rolefit-backend.onrender.com'
+                : 'https://rolefit-backend.onrender.com');
 
   Future<AnalysisResult> analyze({
     String? resumeText,
