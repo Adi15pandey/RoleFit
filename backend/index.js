@@ -17,6 +17,18 @@ const upload = multer({ storage: multer.memoryStorage() });
 app.use(cors());
 app.use(express.json({ limit: '10mb' }));
 
+app.get('/', (req, res) => {
+  res.json({ 
+    status: 'ok', 
+    message: 'RoleFit API',
+    endpoints: {
+      health: '/health',
+      analyze: '/api/analyze',
+      embedding: '/api/embedding'
+    }
+  });
+});
+
 app.get('/health', (req, res) => {
   res.json({ status: 'ok', message: 'RoleFit backend is running' });
 });
