@@ -2,9 +2,11 @@ services:
   - type: web
     name: rolefit-backend
     env: node
+    region: oregon
     rootDir: backend
     buildCommand: npm install
     startCommand: node index.js
+    plan: free
     envVars:
       - key: HUGGINGFACE_API_TOKEN
         sync: false
