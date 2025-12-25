@@ -122,9 +122,9 @@ app.post('/api/embedding', async (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`RoleFit backend running on http://localhost:${PORT}`);
+  console.log(`RoleFit backend running on port ${PORT}`);
   console.log(`Health check: http://localhost:${PORT}/health`);
   if (!process.env.HUGGINGFACE_API_TOKEN) {
-    console.warn('WARNING: HUGGINGFACE_API_TOKEN not set in .env file');
+    console.warn('WARNING: HUGGINGFACE_API_TOKEN not set');
   }
 });
